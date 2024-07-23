@@ -1,0 +1,9 @@
+.Error{
+    display: flex;
+    border: 0.15rem solid red;
+}
+.notError{
+    display: none;
+    visibility: none;
+    border: none;
+}

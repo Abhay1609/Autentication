@@ -1,0 +1,22 @@
+<form (ngSubmit)="onRegister()" class="flex flex-col gap-2 justify-center h-screen">
+    <div [class.Error]="errorCode" [class.notError]="!errorCode" class="relative  p-2 rounded-md text-red-800 justify-center self-center" >
+        {{errorMessage}}
+    </div>
+    <div class="flex flex-col bg-slate-500 content-center flex-wrap self-center gap-8 p-10 rounded-lg">
+    <div class="flex flex-col">
+        <label for="name">Name</label>
+        <input name="name" id="name" [(ngModel)]="name">
+    </div>
+    <div class="flex flex-col">
+        <label for="email">Email</label>
+        <input name="email" id="email" [(ngModel)]="email">
+
+    </div>
+    <div class="flex flex-col">
+        <label for="password" >Password</label>
+        <input name="password" id="password" [(ngModel)]="password">
+    </div >
+    <button class="bg-slate-600 p-2 w-1/2 relative left-1/4 rounded-md hover:bg-slate-400 hover:border-0">Register</button>
+    <div class="flex gap-2"> <p>Already Have account?</p><a class="hover:cursor-pointer relative hover:bottom-1" href="/login">Login</a></div>
+</div>
+</form>
